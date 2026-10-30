@@ -24,7 +24,7 @@ jobs:
 
       - name: Merge PR branches into origin
         run: |
-          git merge pr-11
+          git checkout pr-11
           git merge pr-12
 
       - name: Set up Java 21
