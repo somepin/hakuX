@@ -17,7 +17,12 @@ jobs:
       - name: Add upstream remote
         run: |
           git remote add upstream https://github.com/rfandango/hakuX.git || true
+          git fetch upstream master
           git config --global user.name "github-actions"
+
+      - name: Checkout upstream branch
+        run: |
+          git checkout upstream/master
 
       - name: Set up Java 21
         uses: actions/setup-java@v4
