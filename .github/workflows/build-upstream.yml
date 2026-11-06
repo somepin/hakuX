@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout fork
@@ -17,12 +17,12 @@ jobs:
       - name: Add upstream remote
         run: |
           git remote add upstream https://github.com/rfandango/hakuX.git || true
-          git fetch upstream master
+          git fetch upstream
           git config --global user.name "github-actions"
 
       - name: Checkout upstream branch
         run: |
-          git checkout upstream/master
+          git checkout a7cdb5a975e31730d488c47f6f10440b16c1e6f4
 
       - name: Set up Java 21
         uses: actions/setup-java@v4
