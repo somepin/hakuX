@@ -101,7 +101,7 @@ jobs:
           clone_tag https://github.com/libsdl-org/SDL.git \
             release-3.4.18 "$DEPS/SDL3"
           clone_tag https://gitlab.freedesktop.org/slirp/libslirp.git \
-            v4.7.0 "$DEPS/libslirp"
+            v4.8.0 "$DEPS/libslirp"
 
           # This dependency is pinned to a commit rather than a release tag.
           git clone --filter=blob:none --recurse-submodules \
